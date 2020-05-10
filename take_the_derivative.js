@@ -16,6 +16,12 @@ The output of this function should be a string
 The exponent will never be 1, and neither number will ever be 0
 */
 
-function derive(coefficient,exponent) {
-  
+const derive = (coefficient,exponent) => {
+  let product = coefficient * exponent;
+  let newExp = exponent;
+  if(newExp !== 2) {
+    newExp = newExp - 1;
+  }
+
+  return product + 'x^' + newExp;
 }
